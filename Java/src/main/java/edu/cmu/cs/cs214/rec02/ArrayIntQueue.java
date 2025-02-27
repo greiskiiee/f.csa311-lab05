@@ -3,12 +3,12 @@ package edu.cmu.cs.cs214.rec02;
 import java.util.Arrays;
 
 /**
- * A resizable-array implementation of the {@link IntQueue} interface. The head of
- * the queue starts out at the head of the array, allowing the queue to grow and
- * shrink in constant time.
+ * A resizable-array implementation of the {@link IntQueue} interface. The head
+ * of the queue starts out at the head of the array, allowing the queue to grow
+ * and shrink in constant time.
  *
- * TODO: This implementation contains three bugs! Use your tests to determine the
- * source of the bugs and correct them!
+ * TODO: This implementation contains three bugs! Use your tests to determine
+ * the source of the bugs and correct them!
  *
  * @author Alex Lockwood
  * @author Ye Lu
@@ -44,14 +44,18 @@ public class ArrayIntQueue implements IntQueue {
         size = 0;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     public void clear() {
         Arrays.fill(elementData, 0);
         size = 0;
         head = 0;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     public Integer dequeue() {
         if (isEmpty()) {
             return null;
@@ -62,7 +66,9 @@ public class ArrayIntQueue implements IntQueue {
         return value;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     public boolean enqueue(Integer value) {
         ensureCapacity();
         int tail = (head + size) % elementData.length;
@@ -71,17 +77,28 @@ public class ArrayIntQueue implements IntQueue {
         return true;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
+    //size >= 0 -> dandaa true garna 
     public boolean isEmpty() {
-        return size >= 0;
+        return size == 0;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
+    // ehleed array hoosn bga esehg shalgana
     public Integer peek() {
+        if (isEmpty()) {
+            return null;
+        }
         return elementData[head];
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     public int size() {
         return size;
     }
