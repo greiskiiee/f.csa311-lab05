@@ -102,6 +102,15 @@ public class IntQueueTest {
     }
 
     @Test
+    public void testEnsureCapacity() {
+        for (int i = 0; i < 15; i++) {
+            mQueue.enqueue(i);
+        }
+
+        assertEquals(15, mQueue.size());
+    }
+
+    @Test
     public void testContent() throws IOException {
         // This is an example unit test
         InputStream in = new FileInputStream("src/test/resources/data.txt");
