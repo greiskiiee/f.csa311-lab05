@@ -27,7 +27,7 @@ import org.junit.Test;
  *
  * @author Alex Lockwood, George Guo, Terry Li
  */
-public class IntQueueTest {
+public class ArrayIntQueueTest {
 
     private IntQueue mQueue;
     private List<Integer> testList;
@@ -38,8 +38,8 @@ public class IntQueueTest {
     @Before
     public void setUp() {
         // comment/uncomment these lines to test each class
-        mQueue = new LinkedIntQueue();
-        // mQueue = new ArrayIntQueue();
+        //mQueue = new LinkedIntQueue();
+        mQueue = new ArrayIntQueue();
 
         testList = new ArrayList<>(List.of(1, 2, 3));
     }
