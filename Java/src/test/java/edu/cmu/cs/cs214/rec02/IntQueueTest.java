@@ -101,7 +101,7 @@ public class IntQueueTest {
         assertTrue(mQueue.isEmpty());
     }
 
-    //suuld nemsen test
+    //suuld nemsen test-size nemdeg
     @Test
     public void testEnsureCapacity() {
         for (int i = 0; i < 15; i++) {
