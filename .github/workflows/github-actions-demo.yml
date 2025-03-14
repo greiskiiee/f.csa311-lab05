@@ -23,7 +23,7 @@ jobs:
             maven-${{ runner.os }}-
 
       - name: Build and run tests with Maven
-        run: mvn clean test
+        run: mvn -f Java/pom.xml clean test
         
       - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
       - run: echo "🖥️ The workflow is now ready to test your code on the runner."
