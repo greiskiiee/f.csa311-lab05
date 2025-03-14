@@ -88,7 +88,7 @@ public class ArrayIntQueue implements IntQueue {
     /**
      * {@inheritDoc}
      */
-    // ehleed array hoosn bga esehg shalgana
+    // ehleed array hoosn bga esehg shalgah ystoi
     public Integer peek() {
         if (isEmpty()) {
             return null;
